@@ -11,17 +11,25 @@ public class SelectionSorter extends Sorter {
 	void sort(int[] array, SortingVisualizer display) {
 		//1. make a for loop to iterate through all but the last 
 		//   element of the array
-		
 			//2. create an integer called index and set it equal to i
-			
 			//3. make another for loop that starts at i + 1 and
 			//   goes through the entire array
-			
 				//4. if the array element at j is less than the 
 				//   element at index, then set index equal to j
-				
 			//5. swap the array element at index with the array element at i
 			
+		for(int i = 0; i < array.length-1; i++) {
+			int index = i;
+			for(int j = i+1; j < array.length; j++) {
+				if(array[j] < array[index]) {
+					index = j;
+					display.updateDisplay();
+				}
+			}
+			int swap = array[index];
+			array[index] = array[i];
+			array[i] = swap;
+		}
 		
 	}
 }
