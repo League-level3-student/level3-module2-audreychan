@@ -36,7 +36,7 @@ public class _02_InterpolationSearch {
 		while(start <= end && value >= array[start] && value <= array[end]) {
 			int position = start + (((end - start) / (array[end] - array[start])) * (value - array[start]));
 			if(array[position] == value) {
-				return value;
+				return position;
 			}
 			if(array[position] < value) {
 				start = position++;

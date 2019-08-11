@@ -34,7 +34,7 @@ public class _03_ExponentialSearch {
 		
 		int counter = 1;
 		while(counter < array.length && array[counter] <= value) {
-			value *= 2;
+			counter *= 2;
 		}
 		
 		int minimum;
